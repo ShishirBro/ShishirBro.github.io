@@ -5,30 +5,180 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	
+
 	<head>
 		<title>Portfolio Website For Shishir.</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Clean and professional font */
+    color: #333; /* Dark grey text for readability */
+    background-color: #f4f4f4; /* Off-white background */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for controlling content width */
+.container {
+    width: 85%;
+    max-width: 1200px; /* Maximum width of the content */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation Styles */
+nav#nav {
+    background-color: #02457A; /* Dark blue background */
+    padding: 10px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centering the navigation items */
+    flex-wrap: wrap; /* Allowing items to wrap if needed */
+}
+
+nav#nav li {
+    margin: 0 10px;
+}
+
+nav#nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Headings */
+h1, h2, h3 {
+    color: #023047; /* Dark blue for headings */
+}
+
+/* Links and Buttons */
+a.button {
+    background-color: #fb8500; /* Vibrant orange for buttons */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button:hover {
+    background-color: #ffab76; /* Lighter orange on hover */
+}
+
+/* Project Cards */
+.box {
+    background-color: white;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #02457A; /* Dark blue background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+
+			/* Base styles here (applies to all devices) */
+
+			/* Larger screens */
+			@media (min-width: 1025px) {
+				/* Styles for desktop screens */
+			}
+
+			/* Medium screens (tablets) */
+			@media (min-width: 768px) and (max-width: 1024px) {
+				/* Styles for tablet screens */
+				.container {
+					width: 90%;
+					padding: 0 15px;
+				}
+
+				.col-4, .col-5-large, .col-6-medium, .col-12-small {
+					width: 50%; /* Adjust column widths for tablet layout */
+					padding: 10px; /* Add padding for spacing */
+				}
+			}
+
+			/* Small screens (phones) */
+			@media (max-width: 767px) {
+				/* Styles for mobile screens */
+				.container {
+					width: 100%;
+					padding: 0 10px;
+				}
+
+				nav#nav ul {
+					text-align: center;
+					padding: 0;
+				}
+
+				nav#nav li {
+					display: block;
+					margin: 10px 0;
+				}
+
+				.col-4, .col-5-large, .col-6-medium, .col-12-small {
+					width: 100%; /* Full width for small screens */
+					padding: 5px; /* Smaller padding */
+				}
+
+				.wrapper {
+					padding: 20px 5px; /* Adjust padding */
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="#top">Top</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#certificates">Certificates</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		
 
 		<!-- Home -->
 			<article id="top" class="wrapper style1">
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/portfolio image.jpg" alt="" /></span>
+							<span class="image fit"><img src="images/Propic.jpg" alt="" /></span>
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
@@ -42,7 +192,7 @@
 			</article>
 
 		<!-- Work -->
-<section id="work" class="wrapper style2">
+            <section id="work" class="wrapper style2">
     <div class="container">
         <header>
             <h2>Here's all the stuff about me and what I do.</h2>
@@ -69,113 +219,118 @@
 
 
 		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here are my Projects.</h2>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/Topo map.jpg" alt="" /></a>
-								<h3><a href="#">Project No.1: Topo Map Generation by Surveying Topographic Features</h4>
-									<p class="card-text">Topo Map Generation</a></h3>
-								<p>This project involved creating a detailed topographic map through extensive field surveys and leveraging CAD technology for accurate terrain depiction. It's essential for development planning and landscape analysis.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/time series with legend.png" alt="" /></a>
-								<h3><a href="#">Remote sensing Research Paper</a></h3>
-								<p>This research involved assessing various types of drought and their effects on agriculture. We examined historical data and satellite imagery to understand the correlation between drought occurrences and crop yield fluctuations, leading to valuable insights for sustainable agricultural practices.</p>
-							</article>
-						</div>
-					<footer>
-						
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div>
-			</article>
+<article id="portfolio" class="wrapper style3">
+    <div class="container">
+        <header>
+            <h2>Here are my Projects.</h2>
+        </header>
+        <div class="row">
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/Topo map.jpg" alt="" /></a>
+                    <h3><a href="#">Project No.1: Topo Map Generation by Surveying Topographic Features</a></h3>
+                    <p>This project involved creating a detailed topographic map through extensive field surveys and leveraging CAD technology for accurate terrain depiction. It's essential for development planning and landscape analysis.</p>
+                </article>
+            </div>
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/time series with legend.png" alt="" /></a>
+                    <h3><a href="#">Remote sensing Research Paper</a></h3>
+                    <p>This research involved assessing various types of drought and their effects on agriculture. We examined historical data and satellite imagery to understand the correlation between drought occurrences and crop yield fluctuations, leading to valuable insights for sustainable agricultural practices.</p>
+                </article>
+            </div>
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="https://youtu.be/iHszRs7leYg" class="image featured"><img src="images/Youtube CS50P.png" alt="" /></a>
+                    <h3><a href="#">Project No.3: CS50p final project</a></h3>
+                    <p>This project involves creating time series plots of precipitation data retrieved from the NASA POWER API, utilizing Python programming. The focus is on extracting and visualizing precipitation trends over time to understand historical patterns.</p>
+                </article>
+            </div>
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="https://www.linkedin.com/posts/shishirchaulagain_engineering-fluiddynamics-2dmodeling-activity-7196163492813410304-t8Vz?utm_source=share&utm_medium=member_desktop" class="image featured"><img src="images/mUNCIE RIVER.png" alt="" /></a>
+                    <h3><a href="#">Project No.4: 2D flow modelling of Muncie river channel</a></h3>
+                    <p>This project involved applying shallow water equations to model the Muncie River channel in Indiana, utilizing HEC-RAS software.</p>
+                </article>
+            </div>
+        </div>
+        <footer>
+            <a href="#contact" class="button large scrolly">Get in touch with me</a>
+        </footer>
+    </div>
+</article>
 
-		<!-- Contact -->
-		<section id="contact" class="container mt-4">
-			<div class="row">
-				<div class="col-lg-12">
-					<h2>Contact Information</h2>
-					<p>For project inquiries or collaboration opportunities, please reach out to me via:</p>
-					<ul>
-						<li>Email: shishirchaulagain4@gmail.com</li>
-						<li>LinkedIn: https://www.linkedin.com/in/shishirchaulagain/</li>
-						<li>Phone: +977 9860293185</li>
-					</ul>
-				<div class="row button-section">
-						<div class="col-twelve">
-							<a href="Resume of graduate shishir.pdf" title="Download resume " class="button button-primary">Download resume</a>
-						</div> 
-				</div>
-			</div>
-		</section>
-		<!--		
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>You want to reach out to me.</h2>
-						<p>Please fill up the following details.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
-					</div>
-					
-				</div>
-			</article>  -->
+		<!-- Certificates and Honors -->
+<article id="certificates" class="wrapper style2">
+    <div class="container">
+        <header>
+            <h2>Certificates & Honors</h2>
+        </header>
+        <div class="row">
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/CS50P.png" alt="" /></a>
+                    <h3><a href="#">CS50's Introduction to Programming with Python</a></h3>
+                    <p>Awarded for Completion of CS50P python programming course offered by Harvard University and Taught by David J. Malen</p>
+                </article>
+            </div>
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/Scholarship.png" alt="" /></a>
+                    <h3><a href="#">Scholarship Award</a></h3>
+                    <p>Awarded a merit-based scholarship for outstanding academic performance during the fifth and seventh semesters of my Bachelor’s program in Civil Engineering at Advanced college of Engineering and Management .</p>
+                </article>
+            </div>
+			<div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/Supervised Learning.png" alt="" /></a>
+                    <h3><a href="#"> Supervised Machine Learning: Regression and Classification</a></h3>
+                    <p>Awarded for Completion of Supervised Machine learning course offered by Stanford University and Taught by Andrew Ng.</p>
+                </article>
+            </div>
+			<div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/ArcSWAT.png" alt="" /></a>
+                    <h3><a href="#">ArcSWAT Model with ArcGIS - Run for any Study Area - GIS</a></h3>
+                    <p>Awarded for Completion of Delineation of Watershed using ArcSWAT by Udemy.</p>
+                </article>
+            </div>
+			<div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="#" class="image featured"><img src="images/HEC-RAS.png" alt="" /></a>
+                    <h3><a href="#"> A Practical Introduction to 2D River Modelling in HEC-RAS</a></h3>
+                    <p>Awarded for Completion of 2D River Modelling in HEC-RAS offered by Udemy.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- Contact -->
+<section id="contact" class="container mt-4">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Contact Information</h2>
+            <p>For project inquiries or collaboration opportunities, please reach out to me via:</p>
+            <ul>
+                <li>Email: <a href="mailto:shishirchaulagain4@gmail.com">shishirchaulagain4@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/shishirchaulagain" target="_blank">Shishir Chaulagain</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/yourinstagram" target="_blank">@_yoccr_</a></li>
+				<li>Youtube: <a href="https://youtube.com/@blaze_end6519" target="_blank">Shishir Chaulagain</a></li>
+				<li>Facebook: <a href="https://www.facebook.com/sishirr.chaulagain" target="_blank">Shishir Chaulagain</a></li>
+                <li>Phone: <a href="tel:+9779860293185">+977 9860293185</a></li>
+            </ul>
+            <div class="row button-section">
+                <div class="col-twelve">
+                    <a href="Resume of graduate shishir.pdf" title="Download resume" class="button button-primary">Download resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
