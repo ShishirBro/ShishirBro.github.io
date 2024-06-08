@@ -7,156 +7,257 @@
 <html>
 	
 
-	<head>
-		<title>Portfolio Website For Shishir.</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
+<head>
+    <title>Portfolio Website For Shishir</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+/* Home Section */
+.wrapper.style1 .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.style1 .container .row .col-12 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.text-container {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio */
+    max-height: 300px; /* Set a max height to prevent excessive stretching */
+    border-radius: 50%; /* Optional: if you want to keep the circular appearance */
+}
+
+@media (max-width: 768px) {
+    .wrapper.style1 .container .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 100%;
+        flex: none;
+    }
+
+    .text-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+
 			/* General Body Styles */
-body {
-    font-family: 'Arial', sans-serif; /* Clean and professional font */
-    color: #333; /* Dark grey text for readability */
-    background-color: #f4f4f4; /* Off-white background */
-    line-height: 1.6;
-    padding: 20px;
-}
+            body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
 
-/* Container for controlling content width */
-.container {
-    width: 85%;
-    max-width: 1200px; /* Maximum width of the content */
-    margin: auto;
-    padding: 20px;
-}
+        /* Container for controlling content width */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
 
-/* Navigation Styles */
+        /* Navigation Styles */
+        nav#nav {
+            background-color: #02457A;
+            padding: 10px 0;
+            color: white;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav#nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav#nav li {
+            margin: 0 10px;
+        }
+
+        nav#nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Section Headings */
+        h1, h2, h3 {
+            color: #023047;
+        }
+
+        /* Links and Buttons */
+        a.button {
+            background-color: #fb8500;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a.button:hover {
+            background-color: #ffab76;
+        }
+
+        /* Project Cards */
+        .box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #02457A;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive Layouts */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-4, .col-6-medium, .col-12-small {
+            flex: 1 1 100%;
+            padding: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .col-4 {
+                flex: 1 1 33.33%;
+            }
+
+            .col-6-medium {
+                flex: 1 1 50%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .col-4 {
+                flex: 1 1 25%;
+            }
+
+            .col-6-medium {
+                flex: 1 1 50%;
+            }
+        }
+
+
+
+/* Navigation bar */
 nav#nav {
-    background-color: #02457A; /* Dark blue background */
-    padding: 10px 0;
-    color: white;
-    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #02457A;
+    padding: 10px 20px;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
 nav#nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style: none;
     display: flex;
-    justify-content: center; /* Centering the navigation items */
-    flex-wrap: wrap; /* Allowing items to wrap if needed */
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 nav#nav li {
-    margin: 0 10px;
+    display: inline;
 }
 
 nav#nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
 }
 
-/* Section Headings */
-h1, h2, h3 {
-    color: #023047; /* Dark blue for headings */
+nav#nav a:hover {
+    color: #fb8500;
 }
 
-/* Links and Buttons */
-a.button {
-    background-color: #fb8500; /* Vibrant orange for buttons */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-}
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav#nav {
+        flex-direction: row; /* Change to row for horizontal alignment */
+        justify-content: center; /* Center items horizontally */
+        overflow-x: auto; /* Allow horizontal scrolling on small screens */
+    }
 
-a.button:hover {
-    background-color: #ffab76; /* Lighter orange on hover */
-}
+    nav#nav ul {
+        flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+        overflow: auto; /* Allow scrolling if items exceed the width of the screen */
+    }
 
-/* Project Cards */
-.box {
-    background-color: white;
-    border: 1px solid #ddd; /* Light grey border */
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+    nav#nav ul li {
+        display: inline;
+    }
 
-.box img {
-    width: 100%;
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensures images cover the area without distortion */
-    border-radius: 5px;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #02457A; /* Dark blue background */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    nav#nav a {
+        font-size: 0.8em;
+    }
 }
 
 
-			/* Base styles here (applies to all devices) */
-
-			/* Larger screens */
-			@media (min-width: 1025px) {
-				/* Styles for desktop screens */
-			}
-
-			/* Medium screens (tablets) */
-			@media (min-width: 768px) and (max-width: 1024px) {
-				/* Styles for tablet screens */
-				.container {
-					width: 90%;
-					padding: 0 15px;
-				}
-
-				.col-4, .col-5-large, .col-6-medium, .col-12-small {
-					width: 50%; /* Adjust column widths for tablet layout */
-					padding: 10px; /* Add padding for spacing */
-				}
-			}
-
-			/* Small screens (phones) */
-			@media (max-width: 767px) {
-				/* Styles for mobile screens */
-				.container {
-					width: 100%;
-					padding: 0 10px;
-				}
-
-				nav#nav ul {
-					text-align: center;
-					padding: 0;
-				}
-
-				nav#nav li {
-					display: block;
-					margin: 10px 0;
-				}
-
-				.col-4, .col-5-large, .col-6-medium, .col-12-small {
-					width: 100%; /* Full width for small screens */
-					padding: 5px; /* Smaller padding */
-				}
-
-				.wrapper {
-					padding: 20px 5px; /* Adjust padding */
-				}
-			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -172,24 +273,38 @@ footer {
 			</ul>
 		</nav>
 		
+<!-- Home -->
+<article id="top" class="wrapper style1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-5-large col-12-medium image-container">
+                        <div class="image fit">
+                            <img src="images/propic2.jpg" alt="Profile Picture" class="profile-image" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-7-large col-12-medium text-container">
+                        <header>
+                            <h1>I'm <strong>Shishir Chaulagain</strong>.</h1>
+                        </header>
+                        <p>A <strong>Civil Engineer</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/Propic.jpg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi. I'm <strong>Shishir Chaulagain</strong>.</h1>
-							</header>
-							<p>A <strong>Civil Engineer</strong>.</p>
-							<a href="#work" class="button large scrolly">Learn about me and  what I do</a>
-						</div>
-					</div>
-				</div>
-			</article>
+
+
+
+
+
+
+
+
+
 
 		<!-- Work -->
             <section id="work" class="wrapper style2">
@@ -197,10 +312,16 @@ footer {
         <header>
             <h2>Here's all the stuff about me and what I do.</h2>
             <p style="text-align: justify;">
-                I am a freshly graduated civil engineer from Tribhuvan University, with a dedicated interest in water resources engineering. Throughout my academic career, I received several scholarships recognizing my commitment and excellence in my field. My professional journey includes significant research writing experience, having been involved in two different research projects focused on remote sensing and water resource management.
+                I am a recent graduate in Civil Engineering from Tribhuvan University, passionately specializing in water resources engineering. My academic journey has been distinguished by multiple scholarships that acknowledge my dedication and academic excellence. My professional experiences are deeply rooted in research, particularly focusing on the intersection of remote sensing and climatic hazards, where I have leveraged advanced technologies such as machine learning and deep learning to address critical environmental challenges.
             </p>
             <p style="text-align: justify;">
-                Currently, I am employed at Environment and Resource Management Consultants (ERMC) Pvt. Ltd., one of the leading engineering and management consulting firms in Nepal. Here, I contribute to diverse projects that aim to improve and innovate within the realm of environmental and resource management.
+                In my research projects, I have delved into the intricacies of water resource management and environmental impacts, utilizing cutting-edge tools to analyze and forecast hydrological data. These projects have provided me with a profound understanding of the dynamics of water systems and the potential impacts of climate change, aligning closely with current trends and challenges in the field.
+            </p>
+            <p style="text-align: justify;">
+                Currently, I am working at Environment and Resource Management Consultants (ERMC) Pvt. Ltd., a premier engineering and management consulting firm in Nepal. My role involves contributing to a variety of innovative projects aimed at enhancing environmental sustainability and resource management practices. Here, I apply my research skills and technical expertise to develop solutions that not only address present environmental concerns but also anticipate future challenges in water resource management.
+            </p>
+            <p style="text-align: justify;">
+                I am eager to further my research in water resources engineering and collaborate on projects that explore sustainable solutions for water management and climate resilience. My work experience and academic background have equipped me with the necessary skills to contribute effectively to cutting-edge research and innovation in this field.
             </p>
             <p style="text-align: justify;"> <strong>My technical proficiency includes:</strong></p>
             <ul style="text-align: justify;">
