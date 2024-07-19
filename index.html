@@ -8,6 +8,9 @@
 	
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- Font Awesome for icons -->
     <title>Portfolio Website For Shishir</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -78,7 +81,77 @@
             padding: 20px;
             margin: 0;
         }
+       /* Ensure the body uses the background image */
+/* Global styles to ensure the background image covers the entire page */
+html, body {
+    background-image: url('images/nature_bg.jpg'); /* Update with the correct path to your image */
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background image fixed */
+    color: #fff; /* White text for better contrast */
+    font-family: 'Arial', sans-serif; /* Modern, high-tech font */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
+/* Container to add a semi-transparent background for readability */
+.wrapper, .container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Clear any default background color from sections */
+.wrapper.style1, .wrapper.style2, .wrapper.style3, .box.style2 {
+    background: transparent !important; /* Ensure sections are transparent */
+}
+
+/* Make text more visible */
+h1, h2, h3, h4, h5, h6, p, a {
+    color: #ffffff !important; /* Ensure all text color is white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a stronger shadow to improve readability */
+}
+
+/* Specific styles for the top section */
+#top h1, #top h2, #top h3, #top h4, #top h5, #top h6, #top p, #top a {
+    color: #ffffff !important; /* Ensure all text in the #top section is white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a stronger shadow to improve readability */
+}
+
+/* Contact icons styles */
+.contact-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-icons li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.contact-icons li a {
+    color: #fff; /* White icons for contrast */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Button styles */
+.button-section a {
+    background-color: #007bff; /* Blue background for buttons */
+    border-color: #007bff;
+    color: #fff; /* White text on buttons */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-section a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004085;
+}
         /* Container for controlling content width */
         .container {
             width: 85%;
@@ -287,9 +360,9 @@ nav#nav a:hover {
                     </div>
                     <div class="col-12 col-7-large col-12-medium text-container">
                         <header>
-                            <h1>I'm <strong>Shishir Chaulagain</strong>.</h1>
+                            <h1>I'm Shishir Chaulagain.</h1>
                         </header>
-                        <p>A <strong>Civil Engineer</strong>.</p>
+                        <p>A Civil Engineer.</p>
                     </div>
                 </div>
             </div>
@@ -324,7 +397,7 @@ nav#nav a:hover {
             <p style="text-align: justify;">
                 I am eager to further my research in water resources engineering and collaborate on projects that explore sustainable solutions for water management and climate resilience. My work experience and academic background have equipped me with the necessary skills to contribute effectively to cutting-edge research and innovation in this field.
             </p>
-            <p style="text-align: justify;"> <strong>My technical proficiency includes:</strong></p>
+            <p style="text-align: justify;"> My technical proficiency includes:</p>
             <ul style="text-align: justify;">
                 <li>Python Programming</li>
                 <li>Machine learning and Deep learning</li>
@@ -357,6 +430,15 @@ nav#nav a:hover {
                     </a>
                     <h3><a href="">Research on Assesment of Drought leveraging various sattelite and model based products and evaluate its implication on crop yields.</a></h3>
                     <p>This research involved assessing various types of drought and their effects on agriculture. We examined historical data and satellite imagery to understand the correlation between drought occurrences and crop yield fluctuations, leading to valuable insights for sustainable agricultural practices.</p>
+                </article>
+            </div>
+            <div class="col-4 col-6-medium col-12-small">
+                <article class="box style2">
+                    <a href="" class="image featured">
+                        <img src="images\cnn_LSTM.png" alt="CNN_LSTM forecasting" />
+                    </a>
+                    <h3><a href="">Research on Prediction of soil moisture in near future using CNN_LSTM and CNN_GRU architecture.</a></h3>
+                    <p>This research involved extracting satellite images from SMAP and developing hybrid model of CNN_LSTM and CNN_GRU to predict soil moisture values in near future which can serve as a precautionary measures for concerned authorities.</p>
                 </article>
             </div>
             <div class="col-4 col-6-medium col-12-small">
@@ -437,13 +519,37 @@ nav#nav a:hover {
         <div class="col-lg-12">
             <h2>Contact Information</h2>
             <p>For project inquiries or collaboration opportunities, please reach out to me via:</p>
-            <ul>
-                <li>Email: <a href="mailto:shishirchaulagain4@gmail.com">shishirchaulagain4@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/shishirchaulagain" target="_blank">Shishir Chaulagain</a></li>
-                <li>Instagram: <a href="https://www.instagram.com/yourinstagram" target="_blank">@_yoccr_</a></li>
-				<li>Youtube: <a href="https://youtube.com/@blaze_end6519" target="_blank">Shishir Chaulagain</a></li>
-				<li>Facebook: <a href="https://www.facebook.com/sishirr.chaulagain" target="_blank">Shishir Chaulagain</a></li>
-                <li>Phone: <a href="tel:+9779860293185">+977 9860293185</a></li>
+            <ul class="contact-icons">
+                <li>
+                    <a href="mailto:shishirchaulagain4@gmail.com" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/shishirchaulagain" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/yourinstagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@blaze_end6519" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sishirr.chaulagain" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+9779860293185" target="_blank">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </li>
             </ul>
             <div class="row button-section">
                 <div class="col-twelve">
