@@ -1,0 +1,175 @@
+/* css/style.css - Futuristic coder-style dark theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+header#header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 10px #0ff;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #00f7ff;
+  font-size: 2rem;
+}
+
+nav#nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav#nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav#nav a:hover {
+  color: #0ff;
+}
+
+.content-section {
+  padding: 120px 20px 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  border-left: 3px solid #0ff;
+  box-shadow: 0 0 20px #00f7ff22;
+  border-radius: 10px;
+}
+
+h2, h3 {
+  color: #00ffff;
+}
+
+a.button {
+  display: inline-block;
+  background: #00f7ff;
+  padding: 10px 20px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+a.button:hover {
+  background: #00ffff;
+}
+
+/* Cursor effect */
+.cursor {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #0ff;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  z-index: 10000;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00f7ff88;
+}
+
+/* Terminal-like block used in about.html */
+.terminal-box {
+  background: #0e1117;
+  color: #c9d1d9;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  padding: 20px;
+  font-family: 'Share Tech Mono', monospace;
+  max-width: 750px;
+  margin: 30px auto;
+}
+
+.terminal-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.terminal-header .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background: #ff5f56;
+}
+
+.yellow {
+  background: #ffbd2e;
+}
+
+.green {
+  background: #27c93f;
+}
+
+.terminal-body p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.prompt {
+  color: #00f7ff;
+  margin-right: 8px;
+}
+
+.response {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+/* Blinking terminal cursor */
+.blink-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background-color: #fff;
+  vertical-align: bottom;
+  margin-left: 4px;
+  animation: blink 1s step-start infinite;
+  border-radius: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
