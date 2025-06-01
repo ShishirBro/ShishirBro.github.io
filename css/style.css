@@ -173,3 +173,21 @@ img {
     opacity: 0;
   }
 }
+
+/* Mobile responsiveness for nav */
+@media (max-width: 768px) {
+  nav#nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  header#header {
+    text-align: center;
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+  }
+}
