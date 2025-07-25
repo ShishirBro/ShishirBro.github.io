@@ -1,28 +1,38 @@
 <section id="chatbot-section" style="padding: 2rem; background-color: #f5f5f5;">
-  <h2 style="text-align: center;">Chat with Jarvis</h2>
-  <div id="n8n-chat" style="width: 100%; height: 600px; border: 1px solid #ccc;"></div>
+<div id="n8n-chat"></div>
 
-  <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat@0.2.5/dist/chat.bundle.es.js';
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-    window.addEventListener('DOMContentLoaded', () => {
-      createChat({
-        webhookUrl: 'https://n8n-5oec.onrender.com/webhook/3bd7f7bf-0732-444a-bf4c-d03f40d8adf6/chat',
-        target: '#n8n-chat',
-        mode: 'inline',
-        loadPreviousSession: true,
-        initialMessages: [
-          'Hi there!',
-          "I'm Jarvis, Shishir's AI assistant. Ask me anything from his portfolio.",
-        ],
-        i18n: {
-          en: {
-            title: 'Jarvis',
-            subtitle: 'Your academic assistant 🤖',
-            inputPlaceholder: 'Ask me something...',
-          },
-        },
-      });
-    });
-  </script>
+  createChat({
+    webhookUrl: 'https://n8n-5oec.onrender.com/webhook/3bd7f7bf-0732-444a-bf4c-d03f40d8adf6/chat',
+    webhookConfig: {
+      method: 'POST',
+      headers: {}
+    },
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    loadPreviousSession: true,
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'en',
+    initialMessages: [
+      'Hi there!',
+      'My name is Jarvis, AI assistant for Shishir.',
+    ],
+    i18n: {
+      en: {
+        title: 'JARVIS',
+        subtitle: "here to help you 24/7.",
+        footer: '',
+        getStarted: 'New Conversation',
+        inputPlaceholder: 'What do you want to know about Shishir?',
+      },
+    },
+  });
+</script>
+
 </section>
