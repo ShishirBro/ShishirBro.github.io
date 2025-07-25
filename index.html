@@ -56,8 +56,33 @@
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-	createChat({
-		webhookUrl: 'https://n8n-5oec.onrender.com/webhook/3bd7f7bf-0732-444a-bf4c-d03f40d8adf6/chat'
-	});
+	 createChat({
+    webhookUrl: 'https://n8n-5oec.onrender.com/webhook/3bd7f7bf-0732-444a-bf4c-d03f40d8adf6/chat',
+    webhookConfig: {
+      method: 'POST',
+      headers: {}
+    },
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    loadPreviousSession: true,
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'en',
+    initialMessages: [
+      'Hi there!',
+      'My name is Jarvis, AI assistant for Shishir.',
+    ],
+    i18n: {
+      en: {
+        title: 'JARVIS',
+        subtitle: "here to help you 24/7.",
+        footer: '',
+        getStarted: 'New Conversation',
+        inputPlaceholder: 'What do you want to know about Shishir?',
+      },
+    },
+  });
 </script>
 </html>
