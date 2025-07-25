@@ -21,7 +21,6 @@
           <li><a href="#research">Research</a></li>
           <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#chatbot">Chatbot</a></li>
         </ul>
       </nav>
     </div>
@@ -35,13 +34,12 @@
     <section id="research"></section>
     <section id="certificates"></section>
     <section id="contact"></section>
-    <section id="chatbot"></section>
   </main>
 
   <!-- Scripts -->
   <script>
     // Dynamically load each section's HTML
-    const sections = ["home", "about", "projects", "research", "certificates", "contact", "chatbot"];
+    const sections = ["home", "about", "projects", "research", "certificates", "contact"];
     sections.forEach(id => {
       fetch(`sections/${id}.html`)
         .then(res => res.text())
@@ -53,6 +51,13 @@
   <!-- JS Logic -->
   <script src="js/main.js"></script>
   <script src="js/parallax.js"></script>
-</body>
+</body> 
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
+	createChat({
+		webhookUrl: 'https://n8n-5oec.onrender.com/webhook/3bd7f7bf-0732-444a-bf4c-d03f40d8adf6/chat'
+	});
+</script>
 </html>
