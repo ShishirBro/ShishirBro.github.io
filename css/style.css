@@ -1,3 +1,8 @@
+/* n8n Chatbot custom styles */
+.n8n-chat__message--bot .n8n-chat__bubble {
+  background: #111 !important;
+  color: #fff !important;
+}
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&family=Orbitron:wght@400;500;700;900&display=swap');
 
 * {
