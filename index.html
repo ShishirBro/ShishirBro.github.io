@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shishir | AI & Hydrology Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* n8n Chatbot custom styles */
-    .n8n-chat__message--bot .n8n-chat__bubble {
-      background: #111 !important;
-      color: #fff !important;
-    }
-  </style>
   <link rel="stylesheet" href="css/ui-neon.css">
   <link rel="stylesheet" href="css/floating-coder-bg.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="css/chat-theme.css">
+
+<!-- n8n Chat CSS and Theme Fix -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<style>
+  :root {
+    /* Chat window background */
+    --chat--background: #18182a;
+
+    /* Bot message bubble */
+    --chat--message--bot--background: #222;
+    --chat--message--bot--color: #fff;
+
+    /* User message bubble */
+    --chat--message--user--background: #222;
+    --chat--message--user--color: #fff;
+
+    /* Input area */
+    --chat--input--background: transparent;
+    --chat--input--color: #eaf6fb;
+    --chat--button--background: #20b69e;
+    --chat--button--color: #fff;
+  }
+</style>
+
+
+
 </head>
 <body>
   <div class="cursor"></div>
@@ -91,22 +111,24 @@
   <script src="js/parallax.js"></script>
   <script src="js/ui-neon-bg.js"></script>
 </body>
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<!-- Chat Target -->
+<div id="n8n-chat"></div>
+
+<!-- n8n Chat Script -->
 <script type="module">
   import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-   createChat({
+  createChat({
     webhookUrl: 'https://n8n-5oec.onrender.com/webhook/3bd7f7bf-0732-444a-bf4c-d03f40d8adf6/chat',
     webhookConfig: {
       method: 'POST',
       headers: {}
     },
     target: '#n8n-chat',
-    mode: 'window',
+    mode: 'window', // window popup
     chatInputKey: 'chatInput',
     chatSessionKey: 'sessionId',
     loadPreviousSession: true,
-    metadata: {},
     showWelcomeScreen: false,
     defaultLanguage: 'en',
     initialMessages: [
@@ -124,4 +146,7 @@
     },
   });
 </script>
+
+
+
 </html>
