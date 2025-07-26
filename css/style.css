@@ -335,38 +335,43 @@ p {
 /* Contact Icons */
 .contact-icons {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
 }
 
 .contact-icons li a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 18px;
-  background: #10131f;
-  border: 1.5px solid #23234a;
-  border-radius: 14px;
-  color: #b8c6db;
+  justify-content: center;
+  width: 120px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 80px;
+  background: #00f6ff;
+  border-radius: 16px;
+  color: #111;
   text-decoration: none;
+  font-size: 2.5rem;
+  box-shadow: 0 0 40px #00ffe7cc, 0 0 0 8px #00ffe722;
+  border: none;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 2px 18px #0006;
-  backdrop-filter: blur(10px);
+  margin: 0 auto;
 }
 
 .contact-icons li a:hover {
-  background: #181c2b;
-  border-color: var(--accent-cyan);
-  transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 0 24px #00ffe733;
+  background: #00ffe7;
+  color: #181c2b;
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 0 60px #00ffe7cc, 0 0 0 12px #00ffe722;
 }
 
 .contact-icons i {
-  font-size: 2.2rem;
-  color: #222b3a;
-  filter: drop-shadow(0 0 2px #00ffe755);
+  font-size: 2.5rem;
+  color: #111;
+  filter: drop-shadow(0 0 6px #00ffe7cc);
 }
 
 /* Publications */
