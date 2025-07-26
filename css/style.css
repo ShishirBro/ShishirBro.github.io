@@ -223,8 +223,12 @@ p {
 
 .button:hover::before {
   left: 100%;
+  background: #111 !important;
+  color: #00ffe7 !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.02em;
 }
-
 .button:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 0 40px hsl(180, 100%, 50% / 0.6);
