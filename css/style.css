@@ -341,31 +341,36 @@ p {
   margin-top: 30px;
 }
 
+
 .contact-icons li a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 18px;
+  justify-content: center;
+  padding: 12px;
   background: #10131f;
   border: 1.5px solid #23234a;
-  border-radius: 14px;
+  border-radius: 50%;
   color: #b8c6db;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 0 2px 18px #0006;
   backdrop-filter: blur(10px);
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
 }
 
 .contact-icons li a:hover {
   background: #181c2b;
   border-color: var(--accent-cyan);
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-4px) scale(1.10);
   box-shadow: 0 0 24px #00ffe733;
 }
 
 .contact-icons i {
-  font-size: 2.2rem;
-  color: #222b3a;
+  font-size: 1.8rem;
+  color: #00ffe7;
   filter: drop-shadow(0 0 2px #00ffe755);
 }
 
