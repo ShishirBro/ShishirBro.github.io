@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shishir | AI & Hydrology Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ui-neon.css">
+  <link rel="stylesheet" href="css/floating-coder-bg.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
@@ -13,6 +15,7 @@
   <header id="header">
     <div class="container">
       <h1><a href="#home">Shishir</a></h1>
+      <button class="nav-toggle" aria-label="Open navigation"><span></span></button>
       <nav id="nav">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -32,26 +35,55 @@
     <section id="about"></section>
     <section id="projects"></section>
     <section id="research"></section>
-    <section id="certificates"></section>
+    <section id="certifications-section"></section>
     <section id="contact"></section>
   </main>
 
   <!-- Scripts -->
   <script>
+    // Hamburger menu toggle for mobile nav
+    const navToggle = document.querySelector('.nav-toggle');
+    const navUl = document.querySelector('nav#nav ul');
+    navToggle.addEventListener('click', () => {
+      navUl.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+    // Close nav on link click (mobile)
+    navUl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navUl.classList.remove('open');
+        navToggle.classList.remove('open');
+      });
+    });
+  </script>
+  <script>
     // Dynamically load each section's HTML
-    const sections = ["home", "about", "projects", "research", "certificates", "contact"];
-    sections.forEach(id => {
-      fetch(`sections/${id}.html`)
+    const sections = [
+      { id: "home", file: "home" },
+      { id: "about", file: "about" },
+      { id: "projects", file: "projects" },
+      { id: "research", file: "research" },
+      { id: "certifications-section", file: "certificates" },
+      { id: "contact", file: "contact" }
+    ];
+    sections.forEach(({id, file}) => {
+      fetch(`sections/${file}.html`)
         .then(res => res.text())
-        .then(html => document.getElementById(id).innerHTML = html)
+        .then(html => {
+          const el = document.getElementById(id);
+          if (el) el.innerHTML = html;
+        })
         .catch(err => console.error(`Error loading ${id}:`, err));
     });
   </script>
 
+  <!-- Subtle Coder Floating Background -->
+  <script src="js/floating-coder-bg.js"></script>
   <!-- JS Logic -->
   <script src="js/main.js"></script>
   <script src="js/parallax.js"></script>
-</body> 
+  <script src="js/ui-neon-bg.js"></script>
+</body>
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
